@@ -314,7 +314,7 @@ var WidgetAnnotation = (function WidgetAnnotationClosure() {
     var data = this.data;
 
     var rawValue = Util.getInheritableProperty(dict, 'V') || '';
-    var value = (typeof(rawValue.name) === 'string' ? rawValue : rawValue.name) || '';
+    var value = (typeof(rawValue.name) === 'string' ? rawValue.name : rawValue) || '';
     data.fieldValue = stringToPDFString(value);
     data.alternativeText = stringToPDFString(dict.get('TU') || '');
 
